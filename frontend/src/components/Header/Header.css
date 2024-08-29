@@ -4,8 +4,8 @@
     background: url('/public/header_img.png') no-repeat;
     background-size: cover;
     position: relative;
-    border-radius: 20px; /* Adjust this value as needed */
-    overflow: hidden; /* This ensures that the background image respects the border-radius */
+    border-radius: 20px; 
+    overflow: hidden; 
 }
 
 .header-contents {
