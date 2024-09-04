@@ -22,7 +22,7 @@ const Cart = () => {
         {food_list.map((item, index) => {
           if (cartItems[item._id] > 0) {
             return (
-              <>
+              <React.Fragment key={item._id}>
                 <div className='cart-items-title cart-items-item'>
                   <img src={item.image} alt='' />
                   <p>{item.name}</p>
@@ -32,7 +32,7 @@ const Cart = () => {
                   <p onClick={() => removeFromCart(item._id)} className='cross'>x</p>
                 </div>
                 <hr />
-              </>
+              </React.Fragment>
             )
           }
           return null;
