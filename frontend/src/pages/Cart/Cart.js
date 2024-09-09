@@ -9,6 +9,15 @@ const Cart = () => {
 
   const navigate = useNavigate();
 
+  if (getTotalCartAmount() === 0) {
+    return (
+      <div className='cart-empty'>
+        <p className='cart-empty-text'>Hungry? Your cart is empty! Start adding some tasty meals.</p>
+        <button className='cart-empty-button' onClick={() => navigate('/')}>Browse the Menu</button>
+      </div>
+    );
+  }
+
   return (
     <div className='cart'>
       <div className='cart-items'>

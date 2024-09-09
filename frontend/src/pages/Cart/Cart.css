@@ -1,3 +1,20 @@
+.cart-empty {
+    margin: 70px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.cart-empty-text {
+    color: gray;
+    font-size: 25px;
+    font-weight: 400;
+    padding: 20px 0px;
+}
+
 .cart {
     margin-top: 100px;
 }
@@ -53,7 +70,7 @@
     margin: 10px 0px;
 }
 
-.cart-total button {
+.cart-total button, .cart-empty-button {
     border: none;
     color: white;
     background-color: tomato;
@@ -104,5 +121,9 @@
 
     .cart-promocode {
         justify-content: start;
+    }
+
+    .cart-empty-text {
+        font-size: 20px;
     }
 }
