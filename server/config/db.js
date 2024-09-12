@@ -1,8 +1,13 @@
 import mongoose from "mongoose";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 export const connectDB = async () => {
     try {
-        await mongoose.connect('mongodb+srv://partha:pass1234@cluster0.mfinh.mongodb.net/feast-express-database')
+        const mongoUri = process.env.MONGO_URI;
+        
+        await mongoose.connect(mongoUri)
         .then(() => {
             console.log('DB Connected');
         });
